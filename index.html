@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<!--
+  修改此頁原則:
+
+             (tglink)
+  1 -> 請善用 tgl class (自動將 @xxx 轉換成 https://t.me/xxx)
+       (X) <a href='https://t.me/wikipedia_zh_moha'>@wikipedia_zh_moha</a>
+       (O) <a class='tgl'>@wikipedia_zh_moha</a>
+
+             (autolink)
+  2 -> 請善用 al class (自動將內文中的網址轉成連結)
+       (X) <a href='https://www.example.com'>https://www.example.com</a>
+       (O) <a class='al'>https://www.example.com</a>
+
+  3 -> 請最好避免載入外部函式庫。
+       這只是個群規頁面，不必這麼花俏。載入過多無必要的函式庫只會造成卡頓。
+-->
+
+<head>
+  <title>wikipedia-rules</title>
+  <meta charset='UTF-8'>
+  <style>
+    body {
+      padding-left: 1em;
+      padding-bottom: 0.3em;
+    }
+    li {
+      padding-bottom: 0.4em;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>歡迎來到 wikipedia-zh 的規則檔案庫</h2>
+  <ul>
+    <li>規則檔案庫：<a class='al'>https://github.com/pan93412/wikipedia-rules</a></li>
+    <li><a href='wikipedia-zh-game-rules.html'>wikipedia-zh-game 規則</a></li>
+  <ul>
+</body>
+
+<script>
+  // 自動將內文中的網址轉成連結
+  for (let i of document.querySelectorAll('a.al')) {
+    i.href = i.innerHTML
+  }
+
+  // 自動將 @xxx 轉換成 https://t.me/xxx
+  for (let i of document.querySelectorAll('a.tgl')) {
+    i.href = i.innerHTML.replace('@', 'https://t.me/')
+  }
+</script>
