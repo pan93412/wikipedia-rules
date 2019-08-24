@@ -26,13 +26,15 @@
   4 -> 請最好避免載入外部函式庫。
        這只是個群規頁面，不必這麼花俏。載入過多無必要的函式庫只會造成卡頓。
 -->
-       
+
+<html lang='zh_TW'>  
 <head>
   <title>#wikipedia-zh-game | 群規</title>
   <meta charset='UTF-8'>
+  <meta name='viewport' value='min-width=device-width; initial-scale: 1;'>
   <style>
     body {
-      font-family: sans-serif sans;
+      font-family: sans-serif;
       padding-left: 1em;
     }
 
@@ -111,9 +113,9 @@
 
   // 自動對錨點產生連結
   for (let i of document.querySelectorAll('a')) {
-    console.log(i.id)
     if (i.id != '' && !i.className.match(/nan/)) {
       i.href = '#' + i.id
     }
   }
 </script>
+</html>
