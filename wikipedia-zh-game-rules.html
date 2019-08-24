@@ -57,6 +57,7 @@
 <body>
   <noscript><h2 style='color: red; font-weight: bold;'>請開啟 JavaScript 方可正常瀏覽此頁。</h2></noscript>
   <h1><code>#wikipedia-zh-game</code> 群規</h1>
+  <p><a href='index.html'>回到群組規定索引頁</a></p>
   <h2><a id='group-rule'>群組主要規定</a></h2>
   <ul>
     <li>請勿車輪戰！</li>
@@ -110,7 +111,8 @@
 
   // 自動對錨點產生連結
   for (let i of document.querySelectorAll('a')) {
-    if (i.id != null && !i.className.match(/nan/)) {
+    console.log(i.id)
+    if (i.id != '' && !i.className.match(/nan/)) {
       i.href = '#' + i.id
     }
   }
