@@ -11,4 +11,7 @@ converter() {
    sed -i -e "s/lang='zh_TW'/lang='zh_CN'/g" "$filename"
 }
 
-converter ${files[0]}
+for f in $files
+do
+    converter $f
+done
